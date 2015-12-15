@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.7.0/nv.d3.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.7.0/nv.d3.min.js"></script>
+    </head>
+    <body>
+        
+    <div id="multibarchart"><svg style="width:250px;height:150px;"></svg></div>
+
+
+    <script>
+
+
+
+        data_multibarchart=[{"key": "\u0e0a\u0e32\u0e22", "yAxis": "1", "values": [{"y": 27, "x": "\u0e08\u0e33\u0e19\u0e27\u0e19\u0e17\u0e31\u0e49\u0e07\u0e2b\u0e21\u0e14"}, {"y": 24, "x": "\u0e44\u0e21\u0e48\u0e2a\u0e27\u0e21\u0e2b\u0e21\u0e27\u0e01"}, {"y": 19, "x": "\u0e14\u0e37\u0e48\u0e21\u0e2a\u0e38\u0e23\u0e32"}]}, {"key": "\u0e2b\u0e0d\u0e34\u0e07", "yAxis": "1", "values": [{"y": 4, "x": "\u0e08\u0e33\u0e19\u0e27\u0e19\u0e17\u0e31\u0e49\u0e07\u0e2b\u0e21\u0e14"}, {"y": 2, "x": "\u0e44\u0e21\u0e48\u0e2a\u0e27\u0e21\u0e2b\u0e21\u0e27\u0e01"}, {"y": 1, "x": "\u0e14\u0e37\u0e48\u0e21\u0e2a\u0e38\u0e23\u0e32"}]}];
+
+    nv.addGraph(function() {
+        var chart = nv.models.multiBarChart();
+
+        chart.margin({top: 30, right: 60, bottom: 20, left: 60});
+
+        var datum = data_multibarchart;
+
+
+
+
+            chart.yAxis
+                .tickFormat(d3.format(',.2f'));
+
+
+      chart.showLegend(true);
+
+
+
+        
+
+
+        d3.select('#multibarchart svg')
+            .datum(datum)
+            .transition().duration(500)
+            .attr('width', 250)
+            .attr('height', 150)
+            .call(chart);
+
+
+    });
+
+
+
+
+    </script>
+
+    </body>
+</html>
