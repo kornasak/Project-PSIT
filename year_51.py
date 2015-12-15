@@ -94,7 +94,7 @@ def chart(name, hs):
     chart.add_serie(name="ชาย", y=ydata1, x=xdata)
     chart.add_serie(name="หญิง", y=ydata2, x=xdata)
     chart.buildhtml()
-    file_name = name + ".html"
+    file_name = name + str(hs) + ".html"
     text_file = open(file_name, "w")
     text_file.write(chart.htmlcontent)
     print(chart.htmlcontent)

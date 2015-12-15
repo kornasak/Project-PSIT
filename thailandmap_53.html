@@ -1,0 +1,1982 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+   <link rel="stylesheet" href="https://rawgit.com/andrewgiessel/leafletstuff/master/leaflet.css" />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+   <link rel="stylesheet" href="https://rawgit.com/lvoogdt/Leaflet.awesome-markers/2.0/develop/dist/leaflet.awesome-markers.css">
+   <script src="https://rawgithub.com/lvoogdt/Leaflet.awesome-markers/2.0/develop/dist/leaflet.awesome-markers.js"></script>
+
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+
+   <link rel="stylesheet" href="https://birdage.github.io/Leaflet.awesome-markers/dist/leaflet.awesome.rotate.css">
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-dvf/0.2/leaflet-dvf.markers.min.js"></script>
+   
+   
+   
+
+   <style>
+
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        position:absolute;
+        top:0;
+        bottom:0;
+        right:0;
+        left:0;
+      }
+
+   </style>
+</head>
+
+<body>
+
+   <div class="folium-map" id="folium_3911107b632648d4bc186df342e0c6c7" style="width: 100%; height: 100%"></div>
+
+   <script>
+
+      
+
+      var base_tile = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 18,
+          minZoom: 1,
+          attribution: 'Map data (c) <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+      });
+
+      var baseLayer = {
+        "Base Layer": base_tile
+      };
+
+      /*
+      addition of the wms layers
+      */
+
+      
+
+      /*
+      addition of the tile layers
+      */
+      
+
+      /*
+      list of layers to be added
+      */
+      var layer_list = {
+      
+      };
+
+      /*
+      Bounding box.
+      */
+      var southWest = L.latLng(-90, -180),
+          northEast = L.latLng(90, 180),
+          bounds = L.latLngBounds(southWest, northEast);
+
+      /*
+      Creates the map and adds the selected layers
+      */
+      var map = L.map('folium_3911107b632648d4bc186df342e0c6c7', {
+                                       center:[15.0, 100.0],
+                                       zoom: 7,
+                                       maxBounds: bounds,
+                                       layers: [base_tile]
+                                     });
+
+      L.control.layers(baseLayer, layer_list).addTo(map);
+
+      /*
+      addition of the image layers
+      */
+      
+      
+      //cluster group
+      var clusteredmarkers = L.markerClusterGroup();
+      //section for adding clustered markers
+      
+      //add the clustered markers to the group anyway
+      map.addLayer(clusteredmarkers);
+
+      
+
+      
+      var polygon_1 = new L.RegularPolygonMarker(new L.LatLng(15.078708, 99.513578), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_1.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3610;&#3657;&#3634;&#3609;&#3652;&#3619;&#3656;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_1._popup.options.maxWidth = 300;
+      map.addLayer(polygon_1)
+      
+      var polygon_2 = new L.RegularPolygonMarker(new L.LatLng(16.731054, 102.800478), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_2.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3609;&#3657;&#3635;&#3614;&#3629;&#3591;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_2._popup.options.maxWidth = 300;
+      map.addLayer(polygon_2)
+      
+      var polygon_3 = new L.RegularPolygonMarker(new L.LatLng(13.798722, 100.288073), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_3.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3614;&#3640;&#3607;&#3608;&#3617;&#3621;&#3601;&#3621;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_3._popup.options.maxWidth = 300;
+      map.addLayer(polygon_3)
+      
+      var polygon_4 = new L.RegularPolygonMarker(new L.LatLng(16.376248, 104.546429), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_4.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3609;&#3636;&#3588;&#3617;&#3588;&#3635;&#3626;&#3619;&#3657;&#3629;&#3618;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_4._popup.options.maxWidth = 300;
+      map.addLayer(polygon_4)
+      
+      var polygon_5 = new L.RegularPolygonMarker(new L.LatLng(16.92815, 103.242925), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_5.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3611;&#3619;&#3632;&#3650;&#3588;&#3609;&#3594;&#3633;&#3618;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_5._popup.options.maxWidth = 300;
+      map.addLayer(polygon_5)
+      
+      var polygon_6 = new L.RegularPolygonMarker(new L.LatLng(16.110352, 103.838505), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_6.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3608;&#3623;&#3633;&#3594;&#3610;&#3619;&#3637;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_6._popup.options.maxWidth = 300;
+      map.addLayer(polygon_6)
+      
+      var polygon_7 = new L.RegularPolygonMarker(new L.LatLng(17.334034, 103.477524), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_7.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3626;&#3656;&#3629;&#3591;&#3604;&#3634;&#3623;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_7._popup.options.maxWidth = 300;
+      map.addLayer(polygon_7)
+      
+      var polygon_8 = new L.RegularPolygonMarker(new L.LatLng(14.102776, 99.939159), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_8.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3592;&#3633;&#3609;&#3607;&#3619;&#3640;&#3648;&#3610;&#3585;&#3625;&#3634;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_8._popup.options.maxWidth = 300;
+      map.addLayer(polygon_8)
+      
+      var polygon_9 = new L.RegularPolygonMarker(new L.LatLng(13.846362, 100.562252), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_9.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3623;&#3636;&#3616;&#3634;&#3623;&#3604;&#3637;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_9._popup.options.maxWidth = 300;
+      map.addLayer(polygon_9)
+      
+      var polygon_10 = new L.RegularPolygonMarker(new L.LatLng(13.855967, 100.542724), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_10.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3609;&#3609;&#3607;&#3648;&#3623;&#3594;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_10._popup.options.maxWidth = 300;
+      map.addLayer(polygon_10)
+      
+      var polygon_11 = new L.RegularPolygonMarker(new L.LatLng(18.827182, 99.011832), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_11.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3648;&#3594;&#3637;&#3618;&#3591;&#3651;&#3627;&#3617;&#3656;&#3619;&#3634;&#3617;2<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_11._popup.options.maxWidth = 300;
+      map.addLayer(polygon_11)
+      
+      var polygon_12 = new L.RegularPolygonMarker(new L.LatLng(17.949963, 98.690327), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_12.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3604;&#3629;&#3618;&#3648;&#3605;&#3656;&#3634;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_12._popup.options.maxWidth = 300;
+      map.addLayer(polygon_12)
+      
+      var polygon_13 = new L.RegularPolygonMarker(new L.LatLng(19.402457, 98.975299), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_13.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3648;&#3594;&#3637;&#3618;&#3591;&#3604;&#3634;&#3623;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_13._popup.options.maxWidth = 300;
+      map.addLayer(polygon_13)
+      
+      var polygon_14 = new L.RegularPolygonMarker(new L.LatLng(16.541643, 104.726904), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_14.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3617;&#3640;&#3585;&#3604;&#3634;&#3627;&#3634;&#3619;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_14._popup.options.maxWidth = 300;
+      map.addLayer(polygon_14)
+      
+      var polygon_15 = new L.RegularPolygonMarker(new L.LatLng(16.809878, 100.259567), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_15.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3619;&#3623;&#3617;&#3649;&#3614;&#3607;&#3618;&#3660;&#3614;&#3636;&#3625;&#3603;&#3640;&#3650;&#3621;&#3585;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_15._popup.options.maxWidth = 300;
+      map.addLayer(polygon_15)
+      
+      var polygon_16 = new L.RegularPolygonMarker(new L.LatLng(9.757757, 99.085212), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_16.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3621;&#3632;&#3649;&#3617;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_16._popup.options.maxWidth = 300;
+      map.addLayer(polygon_16)
+      
+      var polygon_17 = new L.RegularPolygonMarker(new L.LatLng(8.390617, 99.971126), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_17.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3617;&#3627;&#3634;&#3619;&#3634;&#3594;&#3609;&#3588;&#3619;&#3624;&#3619;&#3637;&#3608;&#3619;&#3619;&#3617;&#3619;&#3634;&#3594;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_17._popup.options.maxWidth = 300;
+      map.addLayer(polygon_17)
+      
+      var polygon_18 = new L.RegularPolygonMarker(new L.LatLng(13.695215, 101.051644), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_18.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3650;&#3626;&#3608;&#3619;&#3648;&#3623;&#3594;304<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_18._popup.options.maxWidth = 300;
+      map.addLayer(polygon_18)
+      
+      var polygon_19 = new L.RegularPolygonMarker(new L.LatLng(14.125793, 101.007294), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_19.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3629;&#3591;&#3588;&#3660;&#3619;&#3633;&#3585;&#3625;&#3660;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_19._popup.options.maxWidth = 300;
+      map.addLayer(polygon_19)
+      
+      var polygon_20 = new L.RegularPolygonMarker(new L.LatLng(15.878995, 102.910406), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_20.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3648;&#3611;&#3639;&#3629;&#3618;&#3609;&#3657;&#3629;&#3618;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_20._popup.options.maxWidth = 300;
+      map.addLayer(polygon_20)
+      
+      var polygon_21 = new L.RegularPolygonMarker(new L.LatLng(13.985384, 100.612688), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_21.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3611;&#3619;&#3632;&#3594;&#3634;&#3608;&#3636;&#3611;&#3633;&#3605;&#3618;&#3660;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_21._popup.options.maxWidth = 300;
+      map.addLayer(polygon_21)
+      
+      var polygon_22 = new L.RegularPolygonMarker(new L.LatLng(13.179034, 100.928865), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_22.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3626;&#3617;&#3636;&#3605;&#3636;&#3648;&#3623;&#3594;&#3624;&#3619;&#3637;&#3619;&#3634;&#3594;&#3634;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_22._popup.options.maxWidth = 300;
+      map.addLayer(polygon_22)
+      
+      var polygon_23 = new L.RegularPolygonMarker(new L.LatLng(11.487984, 99.60103), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_23.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3607;&#3633;&#3610;&#3626;&#3632;&#3649;&#3585;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_23._popup.options.maxWidth = 300;
+      map.addLayer(polygon_23)
+      
+      var polygon_24 = new L.RegularPolygonMarker(new L.LatLng(14.8966, 100.39767), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_24.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3626;&#3636;&#3591;&#3627;&#3660;&#3610;&#3640;&#3619;&#3637;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_24._popup.options.maxWidth = 300;
+      map.addLayer(polygon_24)
+      
+      var polygon_25 = new L.RegularPolygonMarker(new L.LatLng(13.686065, 101.073948), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_25.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3648;&#3617;&#3639;&#3629;&#3591;&#3593;&#3632;&#3648;&#3594;&#3636;&#3591;&#3648;&#3607;&#3619;&#3634;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_25._popup.options.maxWidth = 300;
+      map.addLayer(polygon_25)
+      
+      var polygon_26 = new L.RegularPolygonMarker(new L.LatLng(13.8057, 100.038983), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_26.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3626;&#3609;&#3634;&#3617;&#3592;&#3633;&#3609;&#3607;&#3619;&#3660;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_26._popup.options.maxWidth = 300;
+      map.addLayer(polygon_26)
+      
+      var polygon_27 = new L.RegularPolygonMarker(new L.LatLng(14.848705, 100.099093), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_27.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3648;&#3604;&#3636;&#3617;&#3610;&#3634;&#3591;&#3609;&#3634;&#3591;&#3610;&#3623;&#3594;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_27._popup.options.maxWidth = 300;
+      map.addLayer(polygon_27)
+      
+      var polygon_28 = new L.RegularPolygonMarker(new L.LatLng(8.645874, 99.940802), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_28.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3607;&#3656;&#3634;&#3624;&#3634;&#3621;&#3634;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_28._popup.options.maxWidth = 300;
+      map.addLayer(polygon_28)
+      
+      var polygon_29 = new L.RegularPolygonMarker(new L.LatLng(18.707521, 99.55502), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_29.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3649;&#3592;&#3657;&#3627;&#3656;&#3617;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_29._popup.options.maxWidth = 300;
+      map.addLayer(polygon_29)
+      
+      var polygon_30 = new L.RegularPolygonMarker(new L.LatLng(16.158901, 100.603648), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_30.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3607;&#3633;&#3610;&#3588;&#3621;&#3657;&#3629;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_30._popup.options.maxWidth = 300;
+      map.addLayer(polygon_30)
+      
+      var polygon_31 = new L.RegularPolygonMarker(new L.LatLng(14.812302, 100.533184), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_31.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3607;&#3656;&#3634;&#3623;&#3640;&#3657;&#3591;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_31._popup.options.maxWidth = 300;
+      map.addLayer(polygon_31)
+      
+      var polygon_32 = new L.RegularPolygonMarker(new L.LatLng(18.461935, 99.129666), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_32.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3649;&#3617;&#3656;&#3607;&#3634;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_32._popup.options.maxWidth = 300;
+      map.addLayer(polygon_32)
+      
+      var polygon_33 = new L.RegularPolygonMarker(new L.LatLng(18.363753, 103.651541), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_33.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3610;&#3638;&#3591;&#3585;&#3634;&#3628;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_33._popup.options.maxWidth = 300;
+      map.addLayer(polygon_33)
+      
+      var polygon_34 = new L.RegularPolygonMarker(new L.LatLng(14.636406, 101.197686), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_34.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3617;&#3623;&#3585;&#3648;&#3627;&#3621;&#3655;&#3585;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_34._popup.options.maxWidth = 300;
+      map.addLayer(polygon_34)
+      
+      var polygon_35 = new L.RegularPolygonMarker(new L.LatLng(8.023683, 98.338841), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_35.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3606;&#3621;&#3634;&#3591;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_35._popup.options.maxWidth = 300;
+      map.addLayer(polygon_35)
+      
+      var polygon_36 = new L.RegularPolygonMarker(new L.LatLng(14.612835, 100.733033), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_36.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3610;&#3657;&#3634;&#3609;&#3627;&#3617;&#3629;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_36._popup.options.maxWidth = 300;
+      map.addLayer(polygon_36)
+      
+      var polygon_37 = new L.RegularPolygonMarker(new L.LatLng(14.585087, 100.451927), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_37.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3629;&#3656;&#3634;&#3591;&#3607;&#3629;&#3591;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_37._popup.options.maxWidth = 300;
+      map.addLayer(polygon_37)
+      
+      var polygon_38 = new L.RegularPolygonMarker(new L.LatLng(14.098288, 101.777765), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_38.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3609;&#3634;&#3604;&#3637;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_38._popup.options.maxWidth = 300;
+      map.addLayer(polygon_38)
+      
+      var polygon_39 = new L.RegularPolygonMarker(new L.LatLng(14.252344, 101.066371), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_39.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3610;&#3657;&#3634;&#3609;&#3609;&#3634;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_39._popup.options.maxWidth = 300;
+      map.addLayer(polygon_39)
+      
+      var polygon_40 = new L.RegularPolygonMarker(new L.LatLng(15.025951, 103.935714), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_40.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3626;&#3635;&#3650;&#3619;&#3591;&#3607;&#3634;&#3610;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_40._popup.options.maxWidth = 300;
+      map.addLayer(polygon_40)
+      
+      var polygon_41 = new L.RegularPolygonMarker(new L.LatLng(16.885604, 101.23024), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_41.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3627;&#3621;&#3656;&#3617;&#3648;&#3585;&#3656;&#3634;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_41._popup.options.maxWidth = 300;
+      map.addLayer(polygon_41)
+      
+      var polygon_42 = new L.RegularPolygonMarker(new L.LatLng(8.076029, 98.914822), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_42.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3585;&#3619;&#3632;&#3610;&#3637;&#3656;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_42._popup.options.maxWidth = 300;
+      map.addLayer(polygon_42)
+      
+      var polygon_43 = new L.RegularPolygonMarker(new L.LatLng(17.938802, 103.947982), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_43.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3648;&#3595;&#3585;&#3634;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_43._popup.options.maxWidth = 300;
+      map.addLayer(polygon_43)
+      
+      var polygon_44 = new L.RegularPolygonMarker(new L.LatLng(15.568773, 101.993917), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_44.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3648;&#3609;&#3636;&#3609;&#3626;&#3591;&#3656;&#3634;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_44._popup.options.maxWidth = 300;
+      map.addLayer(polygon_44)
+      
+      var polygon_45 = new L.RegularPolygonMarker(new L.LatLng(19.190705, 99.877684), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_45.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3614;&#3632;&#3648;&#3618;&#3634;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_45._popup.options.maxWidth = 300;
+      map.addLayer(polygon_45)
+      
+      var polygon_46 = new L.RegularPolygonMarker(new L.LatLng(16.017741, 98.866285), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_46.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3629;&#3640;&#3657;&#3617;&#3612;&#3634;&#3591;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_46._popup.options.maxWidth = 300;
+      map.addLayer(polygon_46)
+      
+      var polygon_47 = new L.RegularPolygonMarker(new L.LatLng(17.275389, 101.158716), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_47.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3604;&#3656;&#3634;&#3609;&#3595;&#3657;&#3634;&#3618;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_47._popup.options.maxWidth = 300;
+      map.addLayer(polygon_47)
+      
+      var polygon_48 = new L.RegularPolygonMarker(new L.LatLng(14.334772, 99.513401), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_48.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3610;&#3656;&#3629;&#3614;&#3621;&#3629;&#3618;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_48._popup.options.maxWidth = 300;
+      map.addLayer(polygon_48)
+      
+      var polygon_49 = new L.RegularPolygonMarker(new L.LatLng(10.502059, 99.143677), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_49.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3608;&#3609;&#3610;&#3640;&#3619;&#3637;-&#3594;&#3640;&#3617;&#3614;&#3619;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_49._popup.options.maxWidth = 300;
+      map.addLayer(polygon_49)
+      
+      var polygon_50 = new L.RegularPolygonMarker(new L.LatLng(17.055514, 99.072873), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_50.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3610;&#3657;&#3634;&#3609;&#3605;&#3634;&#3585;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_50._popup.options.maxWidth = 300;
+      map.addLayer(polygon_50)
+      
+      var polygon_51 = new L.RegularPolygonMarker(new L.LatLng(15.209335, 102.059083), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_51.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3650;&#3609;&#3609;&#3652;&#3607;&#3618;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_51._popup.options.maxWidth = 300;
+      map.addLayer(polygon_51)
+      
+      var polygon_52 = new L.RegularPolygonMarker(new L.LatLng(12.564023, 99.959453), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_52.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3595;&#3634;&#3609;&#3648;&#3611;&#3634;&#3650;&#3621;&#3627;&#3633;&#3623;&#3627;&#3636;&#3609;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_52._popup.options.maxWidth = 300;
+      map.addLayer(polygon_52)
+      
+      var polygon_53 = new L.RegularPolygonMarker(new L.LatLng(15.553461, 100.066086), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_53.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3650;&#3585;&#3619;&#3585;&#3614;&#3619;&#3632;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_53._popup.options.maxWidth = 300;
+      map.addLayer(polygon_53)
+      
+      var polygon_54 = new L.RegularPolygonMarker(new L.LatLng(14.78776, 100.677514), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_54.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3648;&#3617;&#3639;&#3629;&#3591;&#3609;&#3634;&#3619;&#3634;&#3618;&#3603;&#3660;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_54._popup.options.maxWidth = 300;
+      map.addLayer(polygon_54)
+      
+      var polygon_55 = new L.RegularPolygonMarker(new L.LatLng(14.786139, 100.292945), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_55.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3588;&#3656;&#3634;&#3618;&#3610;&#3634;&#3591;&#3619;&#3632;&#3592;&#3633;&#3609;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_55._popup.options.maxWidth = 300;
+      map.addLayer(polygon_55)
+      
+      var polygon_56 = new L.RegularPolygonMarker(new L.LatLng(8.402172, 98.741917), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_56.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3629;&#3656;&#3634;&#3623;&#3621;&#3638;&#3585;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_56._popup.options.maxWidth = 300;
+      map.addLayer(polygon_56)
+      
+      var polygon_57 = new L.RegularPolygonMarker(new L.LatLng(18.185919, 103.737752), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_57.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3624;&#3619;&#3637;&#3623;&#3636;&#3652;&#3621;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_57._popup.options.maxWidth = 300;
+      map.addLayer(polygon_57)
+      
+      var polygon_58 = new L.RegularPolygonMarker(new L.LatLng(19.35261, 99.509976), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_58.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3648;&#3623;&#3637;&#3618;&#3591;&#3611;&#3656;&#3634;&#3648;&#3611;&#3657;&#3634;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_58._popup.options.maxWidth = 300;
+      map.addLayer(polygon_58)
+      
+      var polygon_59 = new L.RegularPolygonMarker(new L.LatLng(8.436185, 99.963628), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_59.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3609;&#3588;&#3619;&#3588;&#3619;&#3636;&#3626;&#3648;&#3605;&#3637;&#3618;&#3609;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_59._popup.options.maxWidth = 300;
+      map.addLayer(polygon_59)
+      
+      var polygon_60 = new L.RegularPolygonMarker(new L.LatLng(19.85029, 100.145435), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_60.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3614;&#3597;&#3634;&#3648;&#3617;&#3655;&#3591;&#3619;&#3634;&#3618;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_60._popup.options.maxWidth = 300;
+      map.addLayer(polygon_60)
+      
+      var polygon_61 = new L.RegularPolygonMarker(new L.LatLng(20.038552, 99.302289), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_61.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3649;&#3617;&#3656;&#3629;&#3634;&#3618;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_61._popup.options.maxWidth = 300;
+      map.addLayer(polygon_61)
+      
+      var polygon_62 = new L.RegularPolygonMarker(new L.LatLng(15.736519, 101.773483), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_62.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3627;&#3609;&#3629;&#3591;&#3610;&#3633;&#3623;&#3619;&#3632;&#3648;&#3627;&#3623;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_62._popup.options.maxWidth = 300;
+      map.addLayer(polygon_62)
+      
+      var polygon_63 = new L.RegularPolygonMarker(new L.LatLng(17.454992, 104.468754), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_63.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3650;&#3614;&#3609;&#3626;&#3623;&#3619;&#3619;&#3588;&#3660;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_63._popup.options.maxWidth = 300;
+      map.addLayer(polygon_63)
+      
+      var polygon_64 = new L.RegularPolygonMarker(new L.LatLng(7.203228, 99.693903), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_64.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3611;&#3632;&#3648;&#3627;&#3621;&#3637;&#3618;&#3609;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_64._popup.options.maxWidth = 300;
+      map.addLayer(polygon_64)
+      
+      var polygon_65 = new L.RegularPolygonMarker(new L.LatLng(14.981726, 102.072392), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_65.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3619;&#3634;&#3594;&#3626;&#3637;&#3617;&#3634;&#3608;&#3609;&#3610;&#3640;&#3619;&#3637;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_65._popup.options.maxWidth = 300;
+      map.addLayer(polygon_65)
+      
+      var polygon_66 = new L.RegularPolygonMarker(new L.LatLng(16.046334, 103.4007), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_66.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3649;&#3585;&#3604;&#3635;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_66._popup.options.maxWidth = 300;
+      map.addLayer(polygon_66)
+      
+      var polygon_67 = new L.RegularPolygonMarker(new L.LatLng(13.892695, 100.509306), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_67.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3594;&#3621;&#3611;&#3619;&#3632;&#3607;&#3634;&#3609;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_67._popup.options.maxWidth = 300;
+      map.addLayer(polygon_67)
+      
+      var polygon_68 = new L.RegularPolygonMarker(new L.LatLng(8.25725, 99.045212), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_68.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3648;&#3586;&#3634;&#3614;&#3609;&#3617;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_68._popup.options.maxWidth = 300;
+      map.addLayer(polygon_68)
+      
+      var polygon_69 = new L.RegularPolygonMarker(new L.LatLng(17.96943, 104.043938), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_69.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3610;&#3638;&#3591;&#3650;&#3586;&#3591;&#3627;&#3621;&#3591;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_69._popup.options.maxWidth = 300;
+      map.addLayer(polygon_69)
+      
+      var polygon_70 = new L.RegularPolygonMarker(new L.LatLng(13.45311, 99.886891), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_70.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3623;&#3633;&#3604;&#3648;&#3614;&#3621;&#3591;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_70._popup.options.maxWidth = 300;
+      map.addLayer(polygon_70)
+      
+      var polygon_71 = new L.RegularPolygonMarker(new L.LatLng(16.651685, 102.379835), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_71.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3616;&#3641;&#3648;&#3623;&#3637;&#3618;&#3591;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_71._popup.options.maxWidth = 300;
+      map.addLayer(polygon_71)
+      
+      var polygon_72 = new L.RegularPolygonMarker(new L.LatLng(17.327134, 104.309219), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_72.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3585;&#3640;&#3626;&#3640;&#3617;&#3634;&#3621;&#3618;&#3660;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_72._popup.options.maxWidth = 300;
+      map.addLayer(polygon_72)
+      
+      var polygon_73 = new L.RegularPolygonMarker(new L.LatLng(15.663812, 102.948967), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_73.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3609;&#3634;&#3650;&#3614;&#3608;&#3636;&#3660;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_73._popup.options.maxWidth = 300;
+      map.addLayer(polygon_73)
+      
+      var polygon_74 = new L.RegularPolygonMarker(new L.LatLng(13.466384, 99.943614), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_74.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3609;&#3616;&#3634;&#3621;&#3633;&#3618;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_74._popup.options.maxWidth = 300;
+      map.addLayer(polygon_74)
+      
+      var polygon_75 = new L.RegularPolygonMarker(new L.LatLng(17.786885, 104.088492), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_75.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3609;&#3634;&#3607;&#3617;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_75._popup.options.maxWidth = 300;
+      map.addLayer(polygon_75)
+      
+      var polygon_76 = new L.RegularPolygonMarker(new L.LatLng(15.696045, 100.122586), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_76.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3611;&#3634;&#3585;&#3609;&#3657;&#3635;&#3650;&#3614;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_76._popup.options.maxWidth = 300;
+      map.addLayer(polygon_76)
+      
+      var polygon_77 = new L.RegularPolygonMarker(new L.LatLng(14.632046, 103.410664), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_77.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3611;&#3619;&#3634;&#3626;&#3634;&#3607;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_77._popup.options.maxWidth = 300;
+      map.addLayer(polygon_77)
+      
+      var polygon_78 = new L.RegularPolygonMarker(new L.LatLng(10.438882, 99.248907), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_78.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3611;&#3634;&#3585;&#3609;&#3657;&#3635;&#3594;&#3640;&#3617;&#3614;&#3619;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_78._popup.options.maxWidth = 300;
+      map.addLayer(polygon_78)
+      
+      var polygon_79 = new L.RegularPolygonMarker(new L.LatLng(16.416282, 100.520545), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_79.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3623;&#3633;&#3591;&#3607;&#3619;&#3634;&#3618;&#3614;&#3641;&#3609;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_79._popup.options.maxWidth = 300;
+      map.addLayer(polygon_79)
+      
+      var polygon_80 = new L.RegularPolygonMarker(new L.LatLng(18.179448, 98.611803), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_80.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3630;&#3629;&#3604;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_80._popup.options.maxWidth = 300;
+      map.addLayer(polygon_80)
+      
+      var polygon_81 = new L.RegularPolygonMarker(new L.LatLng(17.270706, 102.597954), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_81.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3627;&#3609;&#3629;&#3591;&#3623;&#3633;&#3623;&#3595;&#3629;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_81._popup.options.maxWidth = 300;
+      map.addLayer(polygon_81)
+      
+      var polygon_82 = new L.RegularPolygonMarker(new L.LatLng(8.533076, 98.865374), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_82.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3611;&#3621;&#3634;&#3618;&#3614;&#3619;&#3632;&#3618;&#3634;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_82._popup.options.maxWidth = 300;
+      map.addLayer(polygon_82)
+      
+      var polygon_83 = new L.RegularPolygonMarker(new L.LatLng(6.570547, 101.542581), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_83.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3585;&#3619;&#3632;&#3614;&#3657;&#3629;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_83._popup.options.maxWidth = 300;
+      map.addLayer(polygon_83)
+      
+      var polygon_84 = new L.RegularPolygonMarker(new L.LatLng(19.883937, 99.925331), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_84.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3626;&#3617;&#3648;&#3604;&#3655;&#3592;&#3614;&#3619;&#3632;&#3597;&#3634;&#3603;&#3626;&#3633;&#3591;&#3623;&#3619;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_84._popup.options.maxWidth = 300;
+      map.addLayer(polygon_84)
+      
+      var polygon_85 = new L.RegularPolygonMarker(new L.LatLng(16.03965, 100.352228), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_85.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3610;&#3634;&#3591;&#3617;&#3641;&#3621;&#3609;&#3634;&#3585;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_85._popup.options.maxWidth = 300;
+      map.addLayer(polygon_85)
+      
+      var polygon_86 = new L.RegularPolygonMarker(new L.LatLng(16.530293, 104.041515), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_86.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3585;&#3640;&#3593;&#3636;&#3609;&#3634;&#3619;&#3634;&#3618;&#3603;&#3660;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_86._popup.options.maxWidth = 300;
+      map.addLayer(polygon_86)
+      
+      var polygon_87 = new L.RegularPolygonMarker(new L.LatLng(9.123518, 99.310171), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_87.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3626;&#3640;&#3619;&#3634;&#3625;&#3598;&#3619;&#3660;&#3608;&#3634;&#3609;&#3637;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_87._popup.options.maxWidth = 300;
+      map.addLayer(polygon_87)
+      
+      var polygon_88 = new L.RegularPolygonMarker(new L.LatLng(16.42916, 102.848114), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_88.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3586;&#3629;&#3609;&#3649;&#3585;&#3656;&#3609;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_88._popup.options.maxWidth = 300;
+      map.addLayer(polygon_88)
+      
+      var polygon_89 = new L.RegularPolygonMarker(new L.LatLng(15.068953, 100.738346), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_89.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3650;&#3588;&#3585;&#3626;&#3635;&#3650;&#3619;&#3591;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_89._popup.options.maxWidth = 300;
+      map.addLayer(polygon_89)
+      
+      var polygon_90 = new L.RegularPolygonMarker(new L.LatLng(13.881683, 101.407294), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_90.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3624;&#3619;&#3637;&#3617;&#3650;&#3627;&#3626;&#3606;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_90._popup.options.maxWidth = 300;
+      map.addLayer(polygon_90)
+      
+      var polygon_91 = new L.RegularPolygonMarker(new L.LatLng(16.279371, 101.95497), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_91.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3648;&#3585;&#3625;&#3605;&#3619;&#3626;&#3617;&#3610;&#3641;&#3619;&#3603;&#3660;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_91._popup.options.maxWidth = 300;
+      map.addLayer(polygon_91)
+      
+      var polygon_92 = new L.RegularPolygonMarker(new L.LatLng(9.161794, 99.492931), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_92.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3585;&#3634;&#3597;&#3592;&#3609;&#3604;&#3636;&#3625;&#3600;&#3660;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_92._popup.options.maxWidth = 300;
+      map.addLayer(polygon_92)
+      
+      var polygon_93 = new L.RegularPolygonMarker(new L.LatLng(18.744528, 99.221559), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_93.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3649;&#3617;&#3656;&#3629;&#3629;&#3609;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_93._popup.options.maxWidth = 300;
+      map.addLayer(polygon_93)
+      
+      var polygon_94 = new L.RegularPolygonMarker(new L.LatLng(14.141203, 100.823802), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_94.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3627;&#3609;&#3629;&#3591;&#3648;&#3626;&#3639;&#3629;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_94._popup.options.maxWidth = 300;
+      map.addLayer(polygon_94)
+      
+      var polygon_95 = new L.RegularPolygonMarker(new L.LatLng(16.042314, 103.114262), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_95.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3610;&#3619;&#3610;&#3639;&#3629;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_95._popup.options.maxWidth = 300;
+      map.addLayer(polygon_95)
+      
+      var polygon_96 = new L.RegularPolygonMarker(new L.LatLng(16.435133, 100.344522), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_96.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3614;&#3636;&#3592;&#3636;&#3605;&#3619;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_96._popup.options.maxWidth = 300;
+      map.addLayer(polygon_96)
+      
+      var polygon_97 = new L.RegularPolygonMarker(new L.LatLng(15.850829, 103.57166), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_97.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3592;&#3605;&#3640;&#3619;&#3614;&#3633;&#3585;&#3605;&#3619;&#3614;&#3636;&#3617;&#3634;&#3609;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_97._popup.options.maxWidth = 300;
+      map.addLayer(polygon_97)
+      
+      var polygon_98 = new L.RegularPolygonMarker(new L.LatLng(10.707909, 99.318419), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_98.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3611;&#3632;&#3607;&#3636;&#3623;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_98._popup.options.maxWidth = 300;
+      map.addLayer(polygon_98)
+      
+      var polygon_99 = new L.RegularPolygonMarker(new L.LatLng(15.167242, 102.248356), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_99.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3650;&#3609;&#3609;&#3626;&#3641;&#3591;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_99._popup.options.maxWidth = 300;
+      map.addLayer(polygon_99)
+      
+      var polygon_100 = new L.RegularPolygonMarker(new L.LatLng(16.921511, 103.633323), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_100.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3588;&#3635;&#3617;&#3656;&#3623;&#3591;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_100._popup.options.maxWidth = 300;
+      map.addLayer(polygon_100)
+      
+      var polygon_101 = new L.RegularPolygonMarker(new L.LatLng(14.585806, 100.625657), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_101.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3604;&#3629;&#3609;&#3614;&#3640;&#3604;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_101._popup.options.maxWidth = 300;
+      map.addLayer(polygon_101)
+      
+      var polygon_102 = new L.RegularPolygonMarker(new L.LatLng(12.935802, 100.886612), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_102.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3614;&#3633;&#3607;&#3618;&#3634;&#3648;&#3617;&#3650;&#3617;&#3648;&#3619;&#3637;&#3618;&#3621;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_102._popup.options.maxWidth = 300;
+      map.addLayer(polygon_102)
+      
+      var polygon_103 = new L.RegularPolygonMarker(new L.LatLng(13.66455, 100.602438), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_103.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3617;&#3650;&#3609;&#3619;&#3617;&#3618;&#3660;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_103._popup.options.maxWidth = 300;
+      map.addLayer(polygon_103)
+      
+      var polygon_104 = new L.RegularPolygonMarker(new L.LatLng(6.547841, 101.276454), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_104.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3618;&#3632;&#3621;&#3634;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_104._popup.options.maxWidth = 300;
+      map.addLayer(polygon_104)
+      
+      var polygon_105 = new L.RegularPolygonMarker(new L.LatLng(13.817045, 101.305234), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_105.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3619;&#3634;&#3594;&#3626;&#3634;&#3626;&#3660;&#3609;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_105._popup.options.maxWidth = 300;
+      map.addLayer(polygon_105)
+      
+      var polygon_106 = new L.RegularPolygonMarker(new L.LatLng(16.35004, 100.789102), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_106.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3623;&#3633;&#3591;&#3650;&#3611;&#3656;&#3591;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_106._popup.options.maxWidth = 300;
+      map.addLayer(polygon_106)
+      
+      var polygon_107 = new L.RegularPolygonMarker(new L.LatLng(13.792523, 100.194065), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_107.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3609;&#3588;&#3619;&#3594;&#3633;&#3618;&#3624;&#3619;&#3637;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_107._popup.options.maxWidth = 300;
+      map.addLayer(polygon_107)
+      
+      var polygon_108 = new L.RegularPolygonMarker(new L.LatLng(15.115354, 103.611665), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_108.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3592;&#3629;&#3617;&#3614;&#3619;&#3632;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_108._popup.options.maxWidth = 300;
+      map.addLayer(polygon_108)
+      
+      var polygon_109 = new L.RegularPolygonMarker(new L.LatLng(15.211966, 100.666112), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_109.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3627;&#3609;&#3629;&#3591;&#3617;&#3656;&#3623;&#3591;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_109._popup.options.maxWidth = 300;
+      map.addLayer(polygon_109)
+      
+      var polygon_110 = new L.RegularPolygonMarker(new L.LatLng(13.531555, 100.630882), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_110.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3619;&#3633;&#3607;&#3619;&#3636;&#3609;&#3607;&#3619;&#3660;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_110._popup.options.maxWidth = 300;
+      map.addLayer(polygon_110)
+      
+      var polygon_111 = new L.RegularPolygonMarker(new L.LatLng(14.498684, 100.788679), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_111.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3627;&#3609;&#3629;&#3591;&#3649;&#3595;&#3591;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_111._popup.options.maxWidth = 300;
+      map.addLayer(polygon_111)
+      
+      var polygon_112 = new L.RegularPolygonMarker(new L.LatLng(18.049639, 103.085882), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_112.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3650;&#3614;&#3609;&#3614;&#3636;&#3626;&#3633;&#3618;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_112._popup.options.maxWidth = 300;
+      map.addLayer(polygon_112)
+      
+      var polygon_113 = new L.RegularPolygonMarker(new L.LatLng(12.966822, 100.905974), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_113.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3610;&#3634;&#3591;&#3621;&#3632;&#3617;&#3640;&#3591;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_113._popup.options.maxWidth = 300;
+      map.addLayer(polygon_113)
+      
+      var polygon_114 = new L.RegularPolygonMarker(new L.LatLng(6.393557, 101.692961), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_114.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3618;&#3637;&#3656;&#3591;&#3629;&#3648;&#3593;&#3621;&#3636;&#3617;&#3614;&#3619;&#3632;&#3648;&#3585;&#3637;&#3618;&#3619;&#3605;&#3636;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_114._popup.options.maxWidth = 300;
+      map.addLayer(polygon_114)
+      
+      var polygon_115 = new L.RegularPolygonMarker(new L.LatLng(16.709779, 98.572188), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_115.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3649;&#3617;&#3656;&#3626;&#3629;&#3604;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_115._popup.options.maxWidth = 300;
+      map.addLayer(polygon_115)
+      
+      var polygon_116 = new L.RegularPolygonMarker(new L.LatLng(18.084854, 99.846496), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_116.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3621;&#3629;&#3591;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_116._popup.options.maxWidth = 300;
+      map.addLayer(polygon_116)
+      
+      var polygon_117 = new L.RegularPolygonMarker(new L.LatLng(13.576114, 100.27139), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_117.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3624;&#3619;&#3637;&#3623;&#3636;&#3594;&#3633;&#3618;5<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_117._popup.options.maxWidth = 300;
+      map.addLayer(polygon_117)
+      
+      var polygon_118 = new L.RegularPolygonMarker(new L.LatLng(13.056783, 99.88414), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_118.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3610;&#3657;&#3634;&#3609;&#3621;&#3634;&#3604;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_118._popup.options.maxWidth = 300;
+      map.addLayer(polygon_118)
+      
+      var polygon_119 = new L.RegularPolygonMarker(new L.LatLng(8.446277, 99.532948), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_119.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3593;&#3623;&#3634;&#3591;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_119._popup.options.maxWidth = 300;
+      map.addLayer(polygon_119)
+      
+      var polygon_120 = new L.RegularPolygonMarker(new L.LatLng(18.702438, 101.007843), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_120.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3649;&#3617;&#3656;&#3592;&#3619;&#3636;&#3617;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_120._popup.options.maxWidth = 300;
+      map.addLayer(polygon_120)
+      
+      var polygon_121 = new L.RegularPolygonMarker(new L.LatLng(14.924735, 104.686388), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_121.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3650;&#3609;&#3609;&#3588;&#3641;&#3603;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_121._popup.options.maxWidth = 300;
+      map.addLayer(polygon_121)
+      
+      var polygon_122 = new L.RegularPolygonMarker(new L.LatLng(16.134618, 102.534385), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_122.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3617;&#3633;&#3597;&#3592;&#3634;&#3588;&#3637;&#3619;&#3637;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_122._popup.options.maxWidth = 300;
+      map.addLayer(polygon_122)
+      
+      var polygon_123 = new L.RegularPolygonMarker(new L.LatLng(17.849686, 103.569801), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_123.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3610;&#3657;&#3634;&#3609;&#3617;&#3656;&#3623;&#3591;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_123._popup.options.maxWidth = 300;
+      map.addLayer(polygon_123)
+      
+      var polygon_124 = new L.RegularPolygonMarker(new L.LatLng(16.107466, 102.258919), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_124.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3649;&#3585;&#3657;&#3591;&#3588;&#3619;&#3657;&#3629;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_124._popup.options.maxWidth = 300;
+      map.addLayer(polygon_124)
+      
+      var polygon_125 = new L.RegularPolygonMarker(new L.LatLng(7.568677, 99.693906), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_125.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3609;&#3634;&#3650;&#3618;&#3591;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_125._popup.options.maxWidth = 300;
+      map.addLayer(polygon_125)
+      
+      var polygon_126 = new L.RegularPolygonMarker(new L.LatLng(16.817905, 100.271653), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_126.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3619;&#3633;&#3605;&#3609;&#3648;&#3623;&#3594;2<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_126._popup.options.maxWidth = 300;
+      map.addLayer(polygon_126)
+      
+      var polygon_127 = new L.RegularPolygonMarker(new L.LatLng(15.650113, 103.578461), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_127.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3648;&#3585;&#3625;&#3605;&#3619;&#3623;&#3636;&#3626;&#3633;&#3618;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_127._popup.options.maxWidth = 300;
+      map.addLayer(polygon_127)
+      
+      var polygon_128 = new L.RegularPolygonMarker(new L.LatLng(13.747839, 101.362906), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_128.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3614;&#3609;&#3617;&#3626;&#3634;&#3619;&#3588;&#3634;&#3617;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_128._popup.options.maxWidth = 300;
+      map.addLayer(polygon_128)
+      
+      var polygon_129 = new L.RegularPolygonMarker(new L.LatLng(17.895628, 101.662851), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_129.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3648;&#3594;&#3637;&#3618;&#3591;&#3588;&#3634;&#3609;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_129._popup.options.maxWidth = 300;
+      map.addLayer(polygon_129)
+      
+      var polygon_130 = new L.RegularPolygonMarker(new L.LatLng(15.430262, 102.338164), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_130.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3588;&#3591;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_130._popup.options.maxWidth = 300;
+      map.addLayer(polygon_130)
+      
+      var polygon_131 = new L.RegularPolygonMarker(new L.LatLng(15.767944, 101.010051), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_131.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3610;&#3638;&#3591;&#3626;&#3634;&#3617;&#3614;&#3633;&#3609;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_131._popup.options.maxWidth = 300;
+      map.addLayer(polygon_131)
+      
+      var polygon_132 = new L.RegularPolygonMarker(new L.LatLng(7.423264, 100.175424), {
+    color: 'black',
+    opacity: 1,
+    weight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 1,
+    numberOfSides: 3,
+    rotation: 60,
+    radius: 10
+});
+      polygon_132.bindPopup("&#3650;&#3619;&#3591;&#3614;&#3618;&#3634;&#3610;&#3634;&#3621;&#3610;&#3634;&#3591;&#3649;&#3585;&#3657;&#3623;<iframe frameBorder='0' src='Output.html'></iframe>");
+      polygon_132._popup.options.maxWidth = 300;
+      map.addLayer(polygon_132)
+      
+
+      
+
+      
+
+      
+
+      
+
+
+
+   </script>
+
+</body>
